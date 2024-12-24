@@ -1,0 +1,20 @@
+{
+    "name": "Tr Mh Hoàg",
+    "ID": "100047204003653",
+    "mainROD": null,
+    "GPS": {
+        "locate": null,
+        "area": null
+    },
+    "fishBag": [
+        {
+            "ID": 0,
+            "name": "Cá Thách Đấu",
+            "category": "Legendary",
+            "size": 999999,
+            "sell": 0
+        }
+    ],
+    "item": [],
+    "timeRegister": "23:50:31, 25/4/2024"
+}

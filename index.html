@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TatsuYTB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative; 
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; 
+            object-fit: cover;
+        }
+
+        .avatar-container {
+            margin-bottom: 20px;
+            
+        }
+
+        #audioPlayer {
+            margin-top: 20px;
+            width: 300px;
+        }
+
+        .info-text {
+            margin-top: 20px;
+            text-align: center;
+            animation: pulse 2s infinite; 
+        }
+
+        @keyframes pulse {
+            0% {
+                color: red;
+            }
+            25% {
+                color: green;
+            }
+            50% {
+                color: blue;
+            }
+            75% {
+                color: yellow;
+            }
+            100% {
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay muted loop onended="this.play()">
+        <source src="https://files.catbox.moe/v8uz2r.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="avatar-container animate__animated animate__fadeIn">
+        <img src="https://i.pinimg.com/originals/f2/4a/b5/f24ab52159010fa7bb46e98b585a2c79.jpg" alt="avt" style="width: 100px; height: 100px; border-radius: 50%;">
+    </div>
+
+    <div class="info-text animate__animated animate__fadeIn">
+        <p>𝐓𝐞̂𝐧: 𝐍𝐠𝐮𝐲𝐞̂̃𝐧 𝐓𝐮𝐚̂́𝐧 𝐍𝐢𝐧𝐡 (𝐭𝐚𝐭𝐬𝐮)</p>
+        <p>𝐃𝐨𝐧𝐚𝐭𝐞: 𝟎𝟑𝟔𝟑𝟏𝟗𝟏𝟖𝟗𝟗𝟗𝟗 𝐌𝐁</p>
+        <p>𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤: <a href="https://www.facebook.com/TatsuYTB" target="_blank">𝐟𝐛.𝐜𝐨𝐦/𝐓𝐚𝐭𝐬𝐮𝐘𝐓𝐁</a></p>
+        <p>𝐆𝐦𝐚𝐢𝐥: 𝐜𝐨𝐧𝐭𝐚𝐜𝐭.𝐭𝐚𝐭𝐬𝐮𝐲𝐭𝐛@𝐠𝐦𝐚𝐢𝐥.𝐜𝐨𝐦</p>
+    </div>
+
+    <audio controls autoplay loop id="audioPlayer">
+        <source id="audioSource" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button onclick="changeSong()">Chuyển bài hát</button>
+
+    <script>
+        var audioPlayer = document.getElementById('audioPlayer');
+        var songs = ['https://files.catbox.moe/eqqdvx.mp3',
+'https://files.catbox.moe/8g3pyw.mp3',
+'https://files.catbox.moe/dwy88x.mp3',
+'https://files.catbox.moe/ogh6es.mp3',
+'https://files.catbox.moe/tq7c6n.mp3',
+'https://files.catbox.moe/udwa85.mp3',
+'https://files.catbox.moe/9racy9.mp3',
+'https://files.catbox.moe/4d30vk.mp3',
+'https://files.catbox.moe/772a4y.mp3',
+'https://files.catbox.moe/x3mlgd.mp3',
+'https://files.catbox.moe/ugpt27.mp3',
+'https://files.catbox.moe/lyueul.mp3',
+'https://files.catbox.moe/nhapcg.mp3',
+'https://files.catbox.moe/fu4xbc.mp3'
+];
+
+        function changeSong() {
+            var randomIndex = Math.floor(Math.random() * songs.length);
+            audioPlayer.src = songs[randomIndex];
+            audioPlayer.play();
+        }
+
+        window.onload = function() {
+            changeSong();
+        };
+    </script>
+</body>
+</html>
