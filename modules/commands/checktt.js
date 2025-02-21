@@ -26,8 +26,14 @@ module.exports.onLoad = () => {
   setInterval(() => {
     const today = moment.tz("Asia/Ho_Chi_Minh").day();
     const checkttData = fs.readdirSync(path);
-    checkttData.forEach(file => {
-      let fileData = JSON.parse(fs.readFileSync(path + file));
+        try {
+            if (!data || data.length === 0) throw new Error("Dữ liệu JSON trống hoặc không hợp lệ!");
+            let parsedData = JSON.parse(data);
+            parsedData.forEach(...); // Tiếp tục xử lý dữ liệu
+        } catch (error) {
+            console.error("Lỗi khi parse JSON:", error.message);
+        }
+
       if (fileData.time != today) {
         setTimeout(() => {
           fileData = JSON.parse(fs.readFileSync(path + file));
