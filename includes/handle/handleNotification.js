@@ -1,8 +1,3 @@
-/**
- * @warn Do not edit code or edit credits
- * @author D-Jukie
- * @source Disme Project
- */
 module.exports = function ({ api }) {
     const moment = require("moment");
     const botID = api.getCurrentUserID();

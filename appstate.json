@@ -1,0 +1,83 @@
+[
+	{
+		"key": "dbln",
+		"value": "%7B%22100038424070387%22%3A%22F2mIqbVu%22%7D",
+		"domain": "facebook.com",
+		"path": "/login/device-based/",
+		"hostOnly": false,
+		"creation": "2025-02-21T10:52:03.898Z",
+		"lastAccessed": "2025-02-21T10:52:03.899Z"
+	},
+	{
+		"key": "sb",
+		"value": "6dFDZDL_t38svoa8LOV_uVkb",
+		"domain": "facebook.com",
+		"path": "/",
+		"hostOnly": false,
+		"creation": "2025-02-21T10:52:03.899Z",
+		"lastAccessed": "2025-02-21T10:52:03.899Z"
+	},
+	{
+		"key": "ps_n",
+		"value": "1",
+		"domain": "facebook.com",
+		"path": "/",
+		"hostOnly": false,
+		"creation": "2025-02-21T10:52:03.899Z",
+		"lastAccessed": "2025-02-21T10:52:03.899Z"
+	},
+	{
+		"key": "ps_l",
+		"value": "1",
+		"domain": "facebook.com",
+		"path": "/",
+		"hostOnly": false,
+		"creation": "2025-02-21T10:52:03.899Z",
+		"lastAccessed": "2025-02-21T10:52:03.899Z"
+	},
+	{
+		"key": "datr",
+		"value": "EPW3Z2KdujNMmSPNFpTmJTjO",
+		"domain": "facebook.com",
+		"path": "/",
+		"hostOnly": false,
+		"creation": "2025-02-21T10:52:03.899Z",
+		"lastAccessed": "2025-02-21T10:52:03.899Z"
+	},
+	{
+		"key": "c_user",
+		"value": "100038424070387",
+		"domain": "facebook.com",
+		"path": "/",
+		"hostOnly": false,
+		"creation": "2025-02-21T10:52:03.899Z",
+		"lastAccessed": "2025-02-21T10:52:03.899Z"
+	},
+	{
+		"key": "xs",
+		"value": "47%3A2-0wB9i4kDX_CA%3A2%3A1740135108%3A-1%3A6275",
+		"domain": "facebook.com",
+		"path": "/",
+		"hostOnly": false,
+		"creation": "2025-02-21T10:52:03.899Z",
+		"lastAccessed": "2025-02-21T10:52:03.899Z"
+	},
+	{
+		"key": "wd",
+		"value": "1360x728",
+		"domain": "facebook.com",
+		"path": "/",
+		"hostOnly": false,
+		"creation": "2025-02-21T10:52:03.899Z",
+		"lastAccessed": "2025-02-21T10:52:03.899Z"
+	},
+	{
+		"key": "fr",
+		"value": "1SwPQjh2Cqlb92ci2.AWXGFHzRDrLH4bnd170HVNlQMydPS_HW2HU0Pg.BnuDgD..AAA.0.0.BnuFrR.AWUgdPTxoH4",
+		"domain": "facebook.com",
+		"path": "/",
+		"hostOnly": false,
+		"creation": "2025-02-21T10:52:03.899Z",
+		"lastAccessed": "2025-02-21T10:52:03.899Z"
+	}
+]

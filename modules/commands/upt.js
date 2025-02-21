@@ -1,47 +1,44 @@
 module.exports.config = {
-  name: "upt",
-  version: "1.0.0",
+  name: "uptime",
+  version: "1.0.1",
   hasPermssion: 0,
-  credits: "SimonProject",
-  description: "Xem thơi gian của BOT online",
-  commandCategory: "Hệ Thống",
-  usages: "",
+  credits: "Mirai - JRT",
+  description: "Kiểm tra thời gian bot dã online",
+  commandCategory: "Hệ thống admin-bot",
   cooldowns: 5,
-};
-
-module.exports.handleEvent = async ({ event, api, Threads }) => {
-  const moment = require("moment-timezone");
-  const time = process.uptime();
-     var hours = Math.floor(time / (60 * 60));
-    var minutes = Math.floor((time % (60 * 60)) / 60);
-  var seconds = Math.floor(time % 60);
-  var { threadID, messageID, body, senderID } = event;
-  //if (senderID == global.data.botID) return;
-  if ((this.config.credits) != "SimonProject") { return api.sendMessage(`𝐖𝐫𝐨𝐧𝐠 𝐜𝐫𝐞𝐝𝐢𝐭, 𝐟𝐢𝐱 𝐭𝐡𝐞 𝐜𝐫𝐞𝐝𝐢𝐭 𝐛𝐢𝐭𝐜𝐡`, threadID, messageID)}
-  function out(data) {
-    api.sendMessage(data, threadID, messageID)
+  dependencies: {
+    "pidusage": ""
   }
-  var dataThread = (await Threads.getData(threadID));
-  var data = dataThread.data; 
-  const threadSetting = global.data.threadData.get(parseInt(threadID)) || {};
-
-  var arr = ["upt","uptime"];
-  arr.forEach(i => {
-    let str = i[0].toUpperCase() + i.slice(1);
-    if (body === i.toUpperCase() | body === i | str === body) {
-    const prefix = threadSetting.PREFIX || global.config.PREFIX;
-      if (data.PREFIX == null) {
-        return out(` 𝐓𝐡𝐨̛̀𝐢 𝐆𝐢𝐚𝐧 𝐁𝐨𝐭 𝐃̄𝐚̃ 𝐎𝐧𝐥𝐢𝐧𝐞 \n================\n${hours} 𝐠𝐢𝐨̛̀  ${minutes} 𝐩𝐡𝐮́𝐭 ${seconds} 𝐠𝐢𝐚̂𝐲 `)
-      }
-      else return out(` 𝐓𝐡𝐨̛̀𝐢 𝐆𝐢𝐚𝐧 𝐁𝐨𝐭 𝐃̄𝐚̃ 𝐎𝐧𝐥𝐢𝐧𝐞 \n================\n ${hours} 𝐠𝐢𝐨̛̀ ${minutes} 𝐩𝐡𝐮́𝐭 ${seconds} 𝐠𝐢𝐚̂𝐲 ` + data.PREFIX)
-    }
-
-  });
 };
-module.exports.run = async({ event, api }) => {
-    return api.sendMessage({body:`𝐓𝐡𝐨̛̀𝐢 𝐆𝐢𝐚𝐧 𝐁𝐨𝐭 𝐃̄𝐚̃ 𝐎𝐧𝐥𝐢𝐧𝐞 \n================\n ${hours} 𝐠𝐢𝐨̛̀ ${minutes} 𝐩𝐡𝐮́𝐭 ${seconds} 𝐠𝐢𝐚̂𝐲`, attachment: (await global.nodemodule["axios"]({
-url: (await global.nodemodule["axios"]('https://vnhhoang.vnhoang06.repl.co/image/phongcanh')).data.data,
-method: "GET",
-responseType: "stream"
-})).data                                      }, event.threadID)
-      }
+
+function byte2mb(bytes) {
+  const units = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+  let l = 0, n = parseInt(bytes, 10) || 0;
+  while (n >= 1024 && ++l) n = n / 1024;
+  return `${n.toFixed(n < 10 && l > 0 ? 1 : 0)} ${units[l]}`;
+}
+
+module.exports.run = async ({ api, event }) => {
+  const axios = require('axios');
+  const request = require('request');
+  const res = await axios.get(`http://le31.glitch.me/poem`);
+  var love = res.data.data
+  const fs = require("fs");
+  const time = process.uptime(),
+    hours = Math.floor(time / (60 * 60)),
+    minutes = Math.floor((time % (60 * 60)) / 60),
+    seconds = Math.floor(time % 60);
+  const pidusage = await global.nodemodule["pidusage"](process.pid);
+  const moment = require("moment-timezone");
+    var gio = moment.tz("Asia/Ho_Chi_Minh").format("D/MM/YYYY || HH:mm:ss");
+  const timeStart = Date.now();
+  let today = new Date();
+  axios.get('https://api.vangbanlanhat.tk/image?type=cosplay').then(res => {
+  let ext = res.data.data.substring(res.data.data.lastIndexOf(".") + 1);
+  let callback = function () {
+          api.sendMessage({body: `🌺Hôm này là: ${gio}\n🌺Bot của Duy đã họat động dược ${hours} giờ ${minutes} phút ${seconds} giây\n🌺Prefix: ${global.config.PREFIX}.\n🌺Version: 1.2.14\n🌺Tổng người dùng: ${global.data.allUserID.length}\n🌺Tổng Nhóm: ${global.data.allThreadID.length}\n🌺Cpu đang sử dụng: ${pidusage.cpu.toFixed(1)}\n🌺Ram đang sử dụng: ${byte2mb(pidusage.memory)}\n🌺Ping: ${Date.now() - timeStart}ms\n\n🌺Thính:\n${love}`, attachment: fs.createReadStream(__dirname + `/cache/anh.${ext}`)
+          }, event.threadID, () => fs.unlinkSync(__dirname + `/cache/anh.${ext}`), event.messageID);
+        };
+        request(res.data.data).pipe(fs.createWriteStream(__dirname + `/cache/anh.${ext}`)).on("close", callback);
+      })
+}

@@ -20,11 +20,11 @@ mirai.finishLoadModule=Đã tải thành công %1 module commands và %2 module 
 mirai.foundPathAppstate=Đã tìm thấy file appstate
 mirai.notFoundPathAppstate=Không tìm thấy file appstate vui lòng kiểm tra lại
 mirai.checkListGban=Đang kiểm tra danh sách BANNED...
-mirai.banDevice=Hiện tại thiết bị của bạn đã bị ban khỏi Bot, liên hệ tới facebook https://fb.me/TatsuYTB
+mirai.banDevice=Hiện tại thiết bị của bạn đã bị ban khỏi Bot, liên hệ tới facebook https://www.facebook.com/vu.tai.581736/
 mirai.keyNotSameFormat=Dữ liệu bạn nhập phải là một dãy số bao gồm 6 chữ số!
 mirai.codeInputExpired=Code bạn nhập không trùng khớp hoặc đã hết hạn!
 mirai.unbanDeviceSuccess=Facebook ID của bạn đã được gỡ ban, hãy khởi động lại để có thể tiếp tục sử dụng BOT!!!
-mirai.userBanned=Bạn đã bị ban khỏi Bot TatsuYTB vào lúc %1 với lý do: %2.\nVui lòng liên hệ ADMIN qua:\n📌FB: Https://www.facebook.com/TatsuYTB. để biết thêm chi tiết!
+mirai.userBanned=Bạn đã bị ban khỏi Bot TatsuYTB vào lúc %1 với lý do: %2.\nVui lòng liên hệ ADMIN qua:\n📌FB: https://www.facebook.com/vu.tai.581736/ để biết thêm chi tiết!
 mirai.finishCheckListGban=Đã kiểm tra xong danh sách BANNED
 mirai.handleListenError=handleListener đã xảy ra một số lỗi không mong muốn, lỗi: %1
 mirai.warningSourceCode=\nBOT update complete!!!
@@ -58,11 +58,11 @@ users.needObject=Phải là một Object
 
 # includes/handle/handleCommand.js
 
-handleCommand.userBanned=Hiện tại bạn đang bị cấm sử dụng bot!\nLiên hệ FB: https://www.facebook.com/TatsuYTB để được xám hối.\nLí do: %1\n%2
-handleCommand.threadBanned=Hiện tại nhóm của bạn đang bị cấm sử dụng bot!\nLiên hệ FB: https://www.facebook.com/TatsuYTB Để được xám hối.\nLí do: %1\n%2
+handleCommand.userBanned=Hiện tại bạn đang bị cấm sử dụng bot!\nLiên hệ FB: https://www.facebook.com/vu.tai.581736/ để được xám hối.\nLí do: %1\n%2
+handleCommand.threadBanned=Hiện tại nhóm của bạn đang bị cấm sử dụng bot!\nLiên hệ FB: https://www.facebook.com/vu.tai.581736/ Để được xám hối.\nLí do: %1\n%2
 handleCommand.commandNotExist= 𝐋𝐞̣̂𝐧𝐡 𝐬𝐚𝐢! 𝐜𝐨́ 𝐩𝐡𝐚̉𝐢 𝐥𝐞̣̂𝐧𝐡 [ %1 ] 𝐡𝐚𝐲 𝐤𝐡𝐨̂𝐧𝐠?
-handleCommand.commandThreadBanned=Nhóm bạn đã bị cấm sử dụng lệnh "%1"\nVui lòng liên hệ ADMIN qua:\n📌FB: https://www.facebook.com/TatsuYTB
-handleCommand.commandUserBanned=Bạn đã bị cấm sử dụng lệnh "%1"\nVui lòng liên hệ ADMIN qua:\n📌FB: https://www.facebook.com/TatsuYTB
+handleCommand.commandThreadBanned=Nhóm bạn đã bị cấm sử dụng lệnh "%1"\nVui lòng liên hệ ADMIN qua:\n📌FB: https://www.facebook.com/vu.tai.581736/
+handleCommand.commandUserBanned=Bạn đã bị cấm sử dụng lệnh "%1"\nVui lòng liên hệ ADMIN qua:\n📌FB: https://www.facebook.com/vu.tai.581736/
 handleCommand.threadNotAllowNSFW=Nhóm của bạn không được phép sử dụng những lệnh cấm NSFW vì nó chứa nội dung 18+ 
 handleCommand.cantGetInfoThread=Không thể lấy thông tin của nhóm, lỗi: %1
 handleCommand.permssionNotEnough= Xin lỗi vì bạn là thành viên nên lệnh  "%1" sẽ không hoạt động. Chỉ có quản trị viên hoặc ADMIN dùng được!!!

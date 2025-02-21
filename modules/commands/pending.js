@@ -33,7 +33,7 @@ module.exports.handleReply = async function({ api, event, handleReply, getText }
             if (isNaN(singleIndex) || singleIndex <= 0 || singleIndex > handleReply.pending.length) return api.sendMessage(`→ ${singleIndex} Không phải là một con số hợp lệ`, threadID, messageID);
             api.unsendMessage(handleReply.messageID);
             api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Ngô Trung Kiên" : global.config.BOTNAME}`, handleReply.pending[singleIndex - 1].threadID, api.getCurrentUserID());
-            api.sendMessage("", event.threadID, () => api.sendMessage(`❯ Admin: fb.com/TatsuYTB`, handleReply.pending[singleIndex - 1].threadID));
+            api.sendMessage("", event.threadID, () => api.sendMessage(`❯ Admin: https://www.facebook.com/vu.tai.581736/`, handleReply.pending[singleIndex - 1].threadID));
             count+=1;
             
         }

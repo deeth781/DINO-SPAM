@@ -1,0 +1,42 @@
+[
+  {
+    "ID": 0,
+    "ask": "chửi bậy",
+    "ans": [
+      "Xin đừng dùng từ ngữ thiếu văn hóa!",
+      "Chúng ta nên tôn trọng nhau trong nhóm."
+    ]
+  },
+  {
+    "ID": 1,
+    "ask": "kiếm tiền lừa đảo",
+    "ans": [
+      "Lừa đảo là hành vi vi phạm nghiêm trọng!",
+      "Vui lòng tuân thủ quy định của nhóm."
+    ]
+  },
+  {
+    "ID": 2,
+    "ask": "gây sự",
+    "ans": [
+      "Xin đừng gây sự trong nhóm!",
+      "Tạo môi trường thân thiện và văn minh."
+    ]
+  },
+  {
+    "ID": 3,
+    "ask": "sex",
+    "ans": [
+      "Xin đừng nói về những chủ đề không phù hợp!",
+      "Chúng ta giữ cuộc trò chuyện lành mạnh."
+    ]
+  },
+  {
+    "ID": 4,
+    "ask": "hack",
+    "ans": [
+      "Hành vi hack là vi phạm nghiêm trọng!",
+      "Chúng ta cần tôn trọng quyền riêng tư của nhau."
+    ]
+  }
+]

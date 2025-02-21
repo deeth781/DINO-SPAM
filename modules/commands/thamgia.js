@@ -33,7 +33,7 @@ module.exports.handleReply = async ({ event, api, handleReply, Threads }) => {
     }
 };
 module.exports.run = async function({ api, event }) {
-const permission = ["100040472494187"];
+const permission = ["61562004788243"];
          if (!permission.includes(event.senderID)) return api.sendMessage("Bạn không có quyền", event.threadID, event.messageID);	
 const { threadID, messageID, senderID } = event;
     const commandName = this.config.name;

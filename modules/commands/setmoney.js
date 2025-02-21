@@ -98,7 +98,7 @@ if (args.length == 0) return api.sendMessage(`====『𝗦𝗘𝗧 𝗠𝗢𝗡�
            var name = (await Users.getData(event.senderID)).name
             if(!args[1]) return api.sendMessage("[𝐌𝐨𝐧𝐞𝐲] 𝐂𝐡𝐮̛𝐚 𝐧𝐡𝐚̣̂𝐩 𝐬𝐨̂́ 𝐭𝐢𝐞̂̀𝐧", threadID, messageID);
             if(isNaN(args[1])) return api.sendMessage("[𝐌𝐨𝐧𝐞𝐲] 𝐒𝐨̂́ 𝐭𝐢𝐞̂̀𝐧 𝐩𝐡𝐚̉𝐢 𝐥𝐚̀ 𝐬𝐨̂́", threadID, messageID);
-            if(args[1] > 1000000000) return api.sendMessage("[𝐌𝐨𝐧𝐞𝐲] 𝐒𝐨̂́ 𝐭𝐢𝐞̂̀𝐧 𝐩𝐡𝐚̉𝐢 𝐧𝐡𝐨̉ 𝐡𝐨̛𝐧 𝟏𝟎𝟎𝟎𝟎𝟎𝟎𝟎𝟎𝟎", threadID, messageID);
+            if(args[1] > 10000000000000000000000000000) return api.sendMessage("[𝐌𝐨𝐧𝐞𝐲] 𝐒𝐨̂́ 𝐭𝐢𝐞̂̀𝐧 𝐩𝐡𝐚̉𝐢 𝐧𝐡𝐨̉ 𝐡𝐨̛𝐧10000000000000000000000000000", threadID, messageID);
             let { participantIDs } = await api.getThreadInfo(threadID);
             for(let i of participantIDs) {
                 try {
